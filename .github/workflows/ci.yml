@@ -35,4 +35,4 @@ jobs:
     - name: build docker
       run: |
         mvn clean compile assembly:single
-        sudo docker build -t lightchain .
+        sudo docker build -t lightchain --build-arg FILENAME=testcon.sol .
