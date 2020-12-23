@@ -10,9 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-
 import org.apache.log4j.Logger;
-
 import hashing.Hasher;
 import hashing.HashingTools;
 import remoteTest.TestingLog;
@@ -40,7 +38,6 @@ public class LightChainNode extends SkipNode implements LightChainRMIInterface {
 	private Logger logger;
 	private Parameters params;
 	private int token; // Store's the value of tokens owned by a node.
-	//private boolean value; // The value returned from smartcontract is stored here.
 	private CorrectnessVerifier cv;
 
 	/**

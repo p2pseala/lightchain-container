@@ -3,7 +3,7 @@
 ## Setting the parameters:
 Modify the simulation parameters in simulation.config, which looks something like this:
 ```
-nodeCount = 3 [//The](//the) number of nodes to spawn
+nodeCount = 3 // The number of nodes to spawn
 iterations = 100 // The number of transactions to generate
 pace = 1 // The time between every transaction generated (in seconds)
 alpha = 10  // upper limit of attempts to search for validators
@@ -21,8 +21,8 @@ Token = 20 // Represents any type of asset
 ContractMode = False 
 ```
 ## Pre-requisite redarding smart contract integration
-In solidityContracts folder put your .sol file. 
-Detailed instructions are given in [docs](solidityContracts/smartcontract.md).
+In contracts folder put your .sol file. 
+Detailed instructions are given in [docs](contracts/smartcontract.md).
 
 ## Running the simulation 
 
