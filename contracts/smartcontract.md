@@ -13,7 +13,7 @@ Important Step:
 
 7. For every different smart contract we have to write a different version of TransctSol() function.
 
-In  "byte[] data = ByteArrayUtil.merge(Arrays.copyOf(method, 4), DataWord.of(toSend).getData());" if sending multiple parameters to smartcontract then have to add "DataWord.of(some_parameter)".
+In "byte[] data = ByteArrayUtil.merge(Arrays.copyOf(method, 4), DataWord.of(toSend).getData());" if sending multiple parameters to smartcontract then have to add "DataWord.of(some_parameter)".
 
 ```
 Example: 
