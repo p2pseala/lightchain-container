@@ -14,12 +14,14 @@ import org.ethereum.vm.util.ByteArrayUtil;
 import org.ethereum.vm.util.HashUtil;
 import org.ethereum.vm.util.HexUtil;
 import static org.ethereum.vm.util.ByteArrayUtil.merge;
+import org.apache.log4j.Logger;
 
 public class ContractTransaction extends vmbase {
 
     public final BigInteger premine = BigInteger.valueOf(1L).multiply(Unit.ETH); // each account has 1 ether
     public Transaction transaction;
     public Block block;
+    final static Logger logger = Logger.getLogger(ContractTransaction.class);
 
     public void setup() {
         super.setup();
@@ -70,7 +72,7 @@ public class ContractTransaction extends vmbase {
         Transaction transaction = new TransactionMock(true, address, contractAddress, nonce, value, data, gas, gasPrice);
         TransactionExecutor executor = new TransactionExecutor(transaction, block, repository, blockStore);
         TransactionReceipt receipt = executor.run();
-        System.out.println("\n inner contract address "+ receipt);
+        logger.debug("contract created successfully: "+ receipt);
         return contractAddress;
     }
 
@@ -96,7 +98,7 @@ public class ContractTransaction extends vmbase {
             TransactionExecutor executor = new TransactionExecutor(transaction, block, repository, blockStore);
             TransactionReceipt receipt = executor.run();
             int res = Integer.parseInt(Hex.toHexString(receipt.getReturnData()));
-            System.out.println("\n"+res+"\n");
+            logger.debug("output from contract: "+res);
         return res == 1; // returns the value true or false
     }
      

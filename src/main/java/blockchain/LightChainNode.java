@@ -35,7 +35,7 @@ public class LightChainNode extends SkipNode implements LightChainRMIInterface {
 	public boolean mode;
 	private int balance = 20;
 	private SimLog simLog = new SimLog(true);
-	private Logger logger;
+	public Logger logger;
 	private Parameters params;
 	private int token; // Store's the value of tokens owned by a node.
 	private CorrectnessVerifier cv;

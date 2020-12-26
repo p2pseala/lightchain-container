@@ -25,7 +25,7 @@ class LightChainCV extends CorrectnessVerifier {
                 }
                 boolean ownerMode = owner.view.getMode(t.getOwner());
                 if (ownerMode != owner.mode) {
-                    System.out.println("Transaction not correct");
+                    owner.logger.debug("Transaction not correct");
                 }
                 return ownerMode == owner.mode;
         } catch (RemoteException e) {
