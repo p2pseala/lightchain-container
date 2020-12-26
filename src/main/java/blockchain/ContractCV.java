@@ -30,7 +30,7 @@ class ContractCV extends CorrectnessVerifier {
             LightChainRMIInterface ownerRMI = owner.getLightChainRMI(ndowner.getAddress());
             int token1 = ownerRMI.getToken();
             tesq.setup();
-            boolean value = tesq.TransctSol(token1, ct.contractName, ct.functname1);
+            boolean value = tesq.TransctSol(token1, ct.contractName1, ct.functname1);
             return value; 
         } 
         catch (Exception e) {
